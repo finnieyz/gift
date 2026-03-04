@@ -38,7 +38,7 @@ elif menu == "The Poetry Art":
     st.write("Every word here is a prayer and a piece of my heart for you.")
     # Menampilkan gambar yang sudah di-generate di Tahap 1
     try:
-        image = Image.open('poetry_art.png')
+        image = Image.open('gift/poetry_art.png')
         st.image(image, use_container_width=True)
     except FileNotFoundError:
         st.write("Artwork is being curated...")
@@ -72,7 +72,7 @@ elif menu == "The Memory Gallery":
     st.write("---")
 
     try:
-        audio_file = open('gooddays.mp3', 'rb')
+        audio_file = open('gift/gooddays.mp3', 'rb')
         audio_bytes = audio_file.read()
         st.audio(audio_bytes, format='audio/mpeg', autoplay=True)
     except FileNotFoundError:
@@ -85,31 +85,31 @@ elif menu == "The Memory Gallery":
 
         try:
             # Pastikan nama file sesuai dengan foto yang Anda siapkan
-            st.image("f1.jpg", caption="My first friend", use_container_width=True)
+            st.image("gift/f1.jpg", caption="My first friend", use_container_width=True)
             st.write("") # Memberikan sedikit ruang bernapas
-            st.image("f3.jpg", caption="Timeless grace", use_container_width=True)
+            st.image("gift/f3.jpg", caption="Timeless grace", use_container_width=True)
             st.write("") # Memberikan sedikit ruang bernapas
-            st.image("f8.jpg", caption="", use_container_width=True)
+            st.image("gift/f8.jpg", caption="", use_container_width=True)
         except FileNotFoundError:
             st.info("Curating visual memories... (Menyusun kenangan visual...)")
             
     with col2:
         try:
-            st.image("f2.jpg", caption="My forever home", use_container_width=True)
+            st.image("gift/f2.jpg", caption="My forever home", use_container_width=True)
             st.write("")
-            st.image("f4.jpg", caption="Unbreakable bond", use_container_width=True)
+            st.image("gift/f4.jpg", caption="Unbreakable bond", use_container_width=True)
             st.write("")
-            st.image("f9.jpg", caption="", use_container_width=True)
+            st.image("gift/f9.jpg", caption="", use_container_width=True)
         except FileNotFoundError:
             st.empty()
 
     with col3:
         try:
-            st.image("f5.jpg", caption="", use_container_width=True)
+            st.image("gift/f5.jpg", caption="", use_container_width=True)
             st.write("")
-            st.image("f6.jpg", caption="", use_container_width=True)
+            st.image("gift/f6.jpg", caption="", use_container_width=True)
             st.write("")
-            st.image("f10.jpg", caption="", use_container_width=True)
+            st.image("gift/f10.jpg", caption="", use_container_width=True)
         except FileNotFoundError:
             st.empty()
 
@@ -125,7 +125,7 @@ elif menu == "The Secret Vault":
         # Pemutar Musik
         st.write("Listen to this while you read 🎧")
         try:
-            audio_file = open('anyone.mp3', 'rb')
+            audio_file = open('gift/anyone.mp3', 'rb')
             audio_bytes = audio_file.read()
             st.audio(audio_bytes, format='audio/mpeg', autoplay=True)
         except FileNotFoundError:
@@ -154,4 +154,5 @@ I love you with all my heart, forever and always 💗✨.
             
     elif password:
         st.error("Incorrect password. Try again, love.")
+
         
